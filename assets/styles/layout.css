@@ -1,0 +1,133 @@
+/* 🎨 Scrollbar
+=================================================================================== */
+
+/**
+* General
+*/
+
+@media (pointer: fine) {
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--color--white-rock);
+  }
+
+  .dark-mode ::-webkit-scrollbar-track {
+    background: var(--color--tuatara);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--color--salmon-dark);
+  }
+
+  .dark-mode ::-webkit-scrollbar-thumb {
+    background: var(--color--salmon);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color--salmon-dark);
+  }
+
+  .dark-mode ::-webkit-scrollbar-thumb:hover {
+    background: var(--color--salmon);
+  }
+  
+}
+
+/* 🎨 Nuxt root wrapper
+=================================================================================== */
+
+/**
+* General
+*/
+
+#__nuxt {
+  padding: 14px;
+}
+
+@media (min-width: 600px) {
+
+  #__nuxt {
+    padding: 24px;
+  }
+
+}
+
+@media (min-width: 1250px) {
+
+  #__nuxt {
+    padding: 38px;
+  }
+
+}
+
+
+
+/* 🎨 Box
+=================================================================================== */
+
+/**
+* General
+*/
+
+.box {
+  padding: 14px;
+}
+
+@media (min-width: 600px) {
+
+  .box {
+    padding: 22px;
+  }
+
+}
+
+@media (min-width: 1250px) {
+
+  .box {
+    padding: 36px;
+  }
+
+}
+
+/**
+* Extra small
+*/
+
+.box--es {
+  padding: 14px;
+}
+
+@media (min-width: 600px) {
+
+  .box--es {
+    padding: 14px 22px;
+  }
+
+}
+
+@media (min-width: 1250px) {
+
+  .box--es {
+    padding: 14px 36px;
+  }
+
+}
+
+
+
+/* 🎨 Image filter
+=================================================================================== */
+
+/**
+* General
+*/
+
+.image-filter {
+  filter: sepia(15%) blur(2px) saturate(237%) opacity(87%) contrast(197%) invert(17%);
+  -webkit-filter: sepia(15%) blur(2px) saturate(237%) opacity(87%) contrast(197%) invert(17%);
+  -moz-filter: sepia(15%) blur(2px) saturate(237%) opacity(87%) contrast(197%) invert(17%);
+}

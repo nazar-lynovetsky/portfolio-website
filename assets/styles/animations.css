@@ -1,0 +1,300 @@
+/* 🎨 Noise texture
+=================================================================================== */
+
+/**
+* Keyframes
+*/
+
+@keyframes noiseTexture {
+  0% {
+      background-position: 0 0;
+  }
+  10% {
+      background-position: 10px 10px;
+  }
+  20% {
+      background-position: 150px 20px;
+  }
+  30% {
+      background-position: 125px 125px;
+  }
+  40% {
+      background-position: 40px 170px;
+  }
+  50% {
+      background-position: 125px 125px;
+  }
+  60% {
+      background-position: 90px 10px;
+  }
+  70% {
+      background-position: 60px 100px;
+  }
+  80% {
+      background-position: 20px 70px;
+  }
+  90% {
+      background-position: 120px 80px;
+  }
+  to {
+      background-position: 0 250px;
+  }
+}
+
+/**
+* General
+*/
+
+body::after {
+  content: "";
+  display: block;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(/images/layout/noise-texture-light-mode.webp);
+  background-size: 170px 170px;
+  pointer-events: none;
+  animation: noiseTexture .55s steps(1) infinite;
+  will-change: background-position;
+}
+
+@media (min-width: 1250px) {
+
+  body::after {
+    background-size: 250px 250px;
+  }
+
+}
+
+/**
+* General: Theme modes
+*/
+
+.dark-mode body::after {
+  background-image: url(/images/layout/noise-texture-dark-mode.webp);
+}
+
+
+
+/* 🎨 Growing border
+=================================================================================== */
+
+/**
+* Keyframes
+*/
+
+@keyframes widthIn {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes widthOut {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes heightIn {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 100%;
+  }
+}
+
+@keyframes heightOut {
+  0% {
+    height: 100%;
+  }
+  100% {
+    height: 0;
+  }
+}
+
+/**
+* General: On page enter
+*/
+
+.gb--h,
+.gb--v {
+  position: relative;
+}
+
+.gb--h::before,
+.gb--v::after {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 10;
+  background-color: var(--color--tuatara);
+  animation-duration: .8s;
+  animation-delay: .6s;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(1,0,0,1);
+}
+
+.gb--h::before {
+  width: 0;
+  height: 2px;
+  animation-name: widthIn;
+  will-change: width;
+}
+
+.gb--v::after {
+  width: 2px;
+  height: 0;
+  animation-name: heightIn;
+  will-change: height;
+}
+
+/**
+* General: Theme modes
+*/
+
+.dark-mode .gb--h::before,
+.dark-mode .gb--v::after {
+  background-color: var(--color--white-rock);
+}
+
+/**
+* General: On page leave
+*/
+
+.page-leave-active .gb--h::before,
+.page-leave-active .gb--v::after {
+  animation-delay: 0s;
+}
+
+.page-leave-active .gb--h::before {
+  animation-name: widthOut;
+  
+}
+
+.page-leave-active .gb--v::after {
+  animation-name: heightOut;
+}
+
+/**
+* Border: Top
+*/
+
+.gb--tl::before {
+  top: 0;
+  left: 0;
+}
+
+.gb--tr::before {
+  top: 0;
+  right: 0;
+}
+
+/**
+* Border: Right
+*/
+
+.gb--rt::after {
+  top: 0;
+  right: 0;
+}
+
+.gb--rb::after {
+  bottom: 0;
+  right: 0;
+}
+
+/**
+* Border: Bottom
+*/
+
+.gb--bl::before {
+  bottom: 0;
+  left: 0;
+}
+
+.gb--br::before {
+  bottom: 0;
+  right: 0;
+}
+
+/**
+* Border: Left
+*/
+
+.gb--lt::after {
+  top: 0;
+  left: 0;
+}
+
+.gb--lb::after {
+  bottom: 0;
+  left: 0;
+}
+
+
+
+/* 🎨 Transition
+=================================================================================== */
+
+/**
+* Keyframes
+*/
+
+@keyframes transitionIn {
+  0% {
+    opacity: 0;
+    filter: blur(8px);
+    
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+@keyframes transitionOut {
+  0% {
+    opacity: 1;
+    filter: blur(0);
+  }
+  100% {
+    opacity: 0;
+    filter: blur(8px);
+    
+  }
+}
+
+/**
+* Sets the duration of the transition animation between pages.
+*/
+
+.page-enter-active,
+.page-leave-active {
+  transition: all .6s;
+}
+
+/**
+* A helper class that specifies the block to which (plus all childrens) the transition animation will be applied.
+*/
+
+.t {
+  animation-name: transitionIn;
+  animation-duration: .9s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+  will-change: opacity, filter;
+}
+
+.page-leave-active .t {
+  animation-name: transitionOut;
+}

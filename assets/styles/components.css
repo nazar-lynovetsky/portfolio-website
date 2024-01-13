@@ -1,0 +1,76 @@
+/* 🎨 Icon: 'icon' CSS class modifies the <nuxt-icon> component
+=================================================================================== */
+
+/**
+* General
+*/
+
+.icon.nuxt-icon {
+  display: inline-flex;
+  width: 22px;
+  height: 22px;
+}
+
+.icon.nuxt-icon svg {
+  width: 22px;
+  height: 22px;
+  margin: 0;
+}
+
+@media (min-width: 1250px) {
+
+  .icon.nuxt-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .icon.nuxt-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+
+}
+
+/**
+* Small
+*/
+
+.icon--s.nuxt-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.icon--s.nuxt-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+@media (min-width: 1250px) {
+
+  .icon--s.nuxt-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .icon--s.nuxt-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+}
+
+
+
+/* 🎨 Label
+=================================================================================== */
+
+/**
+* General
+*/
+
+.label {
+  font-family: var(--font-family--main);
+  font-size: 1.31em;
+  font-weight: 500;
+  line-height: 1.3;
+}

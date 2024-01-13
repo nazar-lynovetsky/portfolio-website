@@ -1,0 +1,136 @@
+/* 🎨 Button
+=================================================================================== */
+
+/**
+* General
+*/
+
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 38px;
+  padding: 0 18px;
+  border: 2px solid var(--color--tuatara);
+  border-radius: 24px;
+  background-color: var(--color--tuatara);
+  line-height: 1.1;
+  text-align: center;
+  text-decoration: none;
+  color: var(--color--white-rock);
+  cursor: pointer;
+  transition: background-color .2s ease-in-out, color .2s ease-in-out;
+  will-change: background-color, color;
+}
+
+@media (min-width: 1250px) {
+
+  .button {
+    height: 42px;
+    padding: 0 26px;
+  }
+
+}
+
+/**
+* General: Theme modes
+*/
+
+.dark-mode .button {
+  border-color: var(--color--white-rock);
+  background-color: var(--color--white-rock);
+  color: var(--color--tuatara);
+}
+
+/**
+* We set styles for the hover event only for those devices that support this.
+*/
+
+@media (pointer: fine) {
+
+  /**
+  * On hover event
+  */
+
+  .button:hover {
+    background-color: var(--color--white-rock);
+    color: var(--color--tuatara);
+  }
+
+  /**
+  * On hover event: Theme modes
+  */
+
+  .dark-mode .button:hover {
+    background-color: var(--color--tuatara);
+    color: var(--color--white-rock);
+  }
+
+}
+
+/**
+* On active/focus event
+*/
+
+.button:active,
+.button:focus-visible {
+  background-color: var(--color--salmon-dark);
+  color: var(--color--tuatara);
+}
+
+/**
+* On active/focus event: Theme modes
+*/
+
+.dark-mode .button:active,
+.dark-mode .button:focus-visible {
+  background-color: var(--color--salmon);
+  color: var(--color--white-rock);
+}
+
+/**
+* Active
+*/
+
+.button--a,
+.button.router-link-active {
+  background-color: var(--color--white-rock);
+  color: var(--color--tuatara);
+}
+
+/**
+* Active: Theme modes
+*/
+
+.dark-mode .button--a,
+.dark-mode .button.router-link-active {
+  background-color: var(--color--tuatara);
+  color: var(--color--white-rock);
+}
+
+/**
+* Small
+*/
+
+.button--s {
+  height: 30px;
+  padding: 0 8px;
+  font-size: 0.86em;
+}
+
+@media (min-width: 1250px) {
+
+  .button--s {
+    height: 32px;
+    padding: 0 10px;
+  }
+
+}
+
+/**
+* Icon
+*/
+
+.button--i span:last-child {
+  margin-left: 5px;
+}

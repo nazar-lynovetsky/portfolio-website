@@ -1,0 +1,82 @@
+/* 🎨 Scrollable list
+=================================================================================== */
+
+/**
+* General
+*/
+
+.scroll-list {
+  overflow: auto;
+  white-space: nowrap;
+}
+
+/**
+* Hiding the scrollbar for touch devices
+*/
+
+@media (pointer:none), (pointer:coarse) {
+
+  .scroll-list::-webkit-scrollbar {
+    display: none;
+  }
+
+}
+
+/**
+* Item
+*/
+
+.scroll-list__item {
+  display: inline-block;
+  margin-right: 4px;
+}
+
+.scroll-list__item:last-child {
+  margin-right: 0;
+}
+
+
+
+/* 🎨 Inline list
+=================================================================================== */
+
+/**
+* General
+*/
+
+.inline-list {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+
+
+/* 🎨 Column list
+=================================================================================== */
+
+/**
+* General
+*/
+
+.col-list {
+  display: inline-flex;
+  flex-wrap: wrap;
+  column-gap: 4px;
+}
+
+/**
+* Item
+*/
+
+.col-list__item {
+  min-width: 172px;
+}
+
+@media (min-width: 1250px) {
+  
+  .col-list__item {
+    min-width: 180px;
+  }
+
+}
