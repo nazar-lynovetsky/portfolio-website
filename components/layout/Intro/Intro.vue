@@ -2,10 +2,10 @@
   <div class="g-intro t gb--h gb--br">
 
     <!-- Header -->
-    <div class="g__item box" :class="headerCssClasses">
+    <hgroup class="g__item box" :class="headerCssClasses">
       <h1 class="label">Nazar Lynovetsky</h1>
       <p class="h5">Portfolio</p>
-    </div>
+    </hgroup>
 
     <!-- Main -->
     <div class="g__item box d-f fd-c jc-fe" :class="mainCssClasses">
