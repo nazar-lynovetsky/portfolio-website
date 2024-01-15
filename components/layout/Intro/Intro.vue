@@ -1,8 +1,8 @@
 <template>
   <div class="g-intro t gb--h gb--br">
 
-    <!-- Header -->
-    <hgroup class="g__item box" :class="headerCssClasses">
+    <!-- HGroup -->
+    <hgroup class="g__item box" :class="hgroupCssClasses">
       <h1 class="label">Nazar Lynovetsky</h1>
       <p class="h5">Portfolio</p>
     </hgroup>
@@ -35,7 +35,7 @@ const viewport = useViewport()
  * Compute dynamic CSS classes for the "Growing Border" effect based on the current viewport.
  */
 
-const headerCssClasses = computed( () => ( {
+const hgroupCssClasses = computed( () => ( {
   'gb--v gb--rt': viewport.isGreaterOrEquals( 'tablet' )
 } ) )
 const mainCssClasses = computed( () => ( {
