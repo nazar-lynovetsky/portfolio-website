@@ -17,6 +17,10 @@
 </template>
 
 <script setup>
+/**
+ * @todo The 'class' attribute must not be empty
+ */
+
 const props = defineProps( {
   type: {
     type: String,
