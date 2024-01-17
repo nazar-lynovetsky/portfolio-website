@@ -28,12 +28,6 @@
 </template>
 
 <script setup>
-/**
-  * TODO: Написать описание
-  * 
-  * ---- Вывести список в цикле
-  */
-
 import WorkCard          from '~/components/works/WorkCard.vue'
 import { storeToRefs }   from 'pinia'
 import { useWorksStore } from '~/store/works'

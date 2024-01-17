@@ -52,12 +52,6 @@
 </template>
 
 <script setup>
-/**
-  * TODO: Написать описание
-  * 
-  * ---- Вывести список в цикле
-  */
-
 import ScrollToTopButton from '~/components/ui/Nav/ScrollToTopButton.vue'
 import { isCurrentPath } from '~/utils/route'
 

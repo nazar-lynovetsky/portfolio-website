@@ -40,10 +40,6 @@
 </template>
 
 <script setup>
-/**
- * @todo Паттерн скрывать условием для мобильных?
- */
-
 import { computed } from 'vue'
 
 const props = defineProps( {

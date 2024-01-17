@@ -1,8 +1,3 @@
-/**
-  * TODO: Написать описание
-  * 
-  */
-
 export default defineNuxtRouteMiddleware( async ( to, from ) => {
 
   if ( process.client && typeof window !== 'undefined' ) {
