@@ -14,7 +14,7 @@ import Heading     from '~/components/layout/Heading/Heading.vue'
 import LatestWorks from '~/components/works/LatestWorks.vue'
 
 useHead({
-  title: 'Nazar Lynovetsky',
+  title: 'Portfolio of Nazar Lynovetsky',
   meta: [
     { name: 'description', content: 'Nazar Lynovetsky - Full-stack Javascript Developer.' }
   ],
