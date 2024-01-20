@@ -21,9 +21,6 @@
     <article class="gb--h gb--bl">
       <WorkCard :data="works[ 6 ]" type="big" />
     </article>
-    <article>
-      <WorkCard :data="works[ 7 ]" type="big" direction="left" />
-    </article>
   </div>
 </template>
 
