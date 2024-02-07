@@ -11,7 +11,7 @@
     <!-- Main -->
     <div class="work-card__main box">
       <h3>{{ data.name }}</h3>
-      <p>2022</p>
+      <p>2023</p>
     </div>
 
     <!-- List -->
